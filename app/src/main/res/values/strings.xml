@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Learn-RoomDatabase</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="student_profile_fragment">Student Profile Fragment</string>
+    <string name="student_name">Name :</string>
+    <string name="enter_name">Enter name</string>
+    <string name="student_age">Age :</string>
+    <string name="enter_age">Enter age</string>
+    <string name="student_location">Location :</string>
+    <string name="enter_place">Enter Place</string>
+    <string name="save_data">Save Data</string>
+    <string name="place">Place</string>
+</resources>
