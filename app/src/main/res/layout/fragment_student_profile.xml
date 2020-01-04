@@ -115,4 +115,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnSaveData" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiRollNo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetStudentsList"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etRollNo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:inputType="number"
+            android:maxLength="2"
+            android:hint="@string/enter_roll_no" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGetStudentRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/student_record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tiRollNo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDeleteStudentRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/delete_record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGetStudentRecord" />
 </androidx.constraintlayout.widget.ConstraintLayout>

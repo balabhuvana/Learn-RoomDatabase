@@ -13,4 +13,7 @@
     <string name="save_data">Save Data</string>
     <string name="place">Place</string>
     <string name="student_list">Student List</string>
+    <string name="student_record">Student Record</string>
+    <string name="enter_roll_no">Enter roll no</string>
+    <string name="delete_record">Delete Record</string>
 </resources>

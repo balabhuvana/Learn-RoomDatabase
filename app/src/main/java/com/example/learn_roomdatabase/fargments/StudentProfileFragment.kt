@@ -70,8 +70,23 @@ class StudentProfileFragment : Fragment() {
 
         btnGetStudentsList.setOnClickListener {
 
+            /**
+             * This code is for doing a long work in background thread using kotlin
+             */
             GlobalScope.launch {
                 studentRepository?.selectStudentList()
+            }
+        }
+
+        btnGetStudentRecord.setOnClickListener {
+            GlobalScope.launch {
+                studentRepository?.selectSpecificStudent(etRollNo.text.toString().toInt())
+            }
+        }
+
+        btnDeleteStudentRecord.setOnClickListener {
+            GlobalScope.launch {
+                studentRepository?.deleteSpecificStudent(etRollNo.text.toString().toInt())
             }
         }
     }

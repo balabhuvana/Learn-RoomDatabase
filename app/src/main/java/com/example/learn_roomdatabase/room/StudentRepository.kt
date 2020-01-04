@@ -11,10 +11,27 @@ class StudentRepository(private var studentDao: StudentDao) {
     fun selectStudentList() {
         val studentList = studentDao.getStudentRecords()
         for (student in studentList) {
+            Log.i("ID :", "" + student.studentRollNo)
             Log.i("Name : ", "" + student.studentName)
             Log.i("Age : ", "" + student.studentAge)
             Log.i("Place : ", "" + student.studentPlace)
         }
     }
 
+    fun selectSpecificStudent(rollNo: Int) {
+        val student: Student? = studentDao.getSpecificStudentRecord(rollNo)
+        student?.apply {
+            Log.i("ID :", "" + student.studentRollNo)
+            Log.i("Name : ", "" + student.studentName)
+            Log.i("Age : ", "" + student.studentAge)
+            Log.i("Place : ", "" + student.studentPlace)
+        }
+    }
+
+    fun deleteSpecificStudent(rollNo: Int) {
+        val student: Student? = studentDao.getSpecificStudentRecord(rollNo)
+        student.let {
+            student?.let { it1 -> studentDao.deleteSpecificRecord(it1) }
+        }
+    }
 }
